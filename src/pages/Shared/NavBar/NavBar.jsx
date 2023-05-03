@@ -13,7 +13,7 @@ const NavBar = () => {
     const userPhotoUrlStatus = useValidateImageURL(user?.photoURL);
 
     return (
-        <div className="nav-bar mt-10 mx-0 sm:mx-5 mb-[100px]">
+        <div className="nav-bar mt-10 mx-0 sm:mx-5 mb-10">
             <div className="container max-w-[1920px] mx-auto">
                 <nav className="bg-white border-gray-200 dark:bg-gray-900">
                     <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
