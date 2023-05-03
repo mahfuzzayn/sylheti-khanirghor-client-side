@@ -36,7 +36,8 @@ const Recipe = ({ recipe }) => {
                     }`}
                 ></MdArrowDropDown>
                 <span className="font-medium pr-2">
-                    {isDropDownVisible ? "Hide" : "See"} Ingredients
+                    {isDropDownVisible ? "Hide" : "See"} Ingredients:{" "}
+                    {ingredients.length}
                 </span>
             </button>
             <div
