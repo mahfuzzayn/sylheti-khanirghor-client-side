@@ -10,10 +10,7 @@ const ChefCard = ({ chef }) => {
     return (
         <div className="chef-card bg-green-50 p-5 rounded-xl">
             <div className="picture">
-                <LazyLoad
-                    height={250}
-                    onContentVisible={() => console.log("loaded!")}
-                >
+                <LazyLoad height={250}>
                     <img
                         src={picture}
                         className="w-full h-[250px] object-cover rounded-xl"

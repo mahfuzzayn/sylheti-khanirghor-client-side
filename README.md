@@ -1,6 +1,6 @@
 # Sylheti Khanighor
 
-Live site: 
+Live site: https://sylheti-khanirghor.web.app/
 
 ## Features ✨
 * Firebase Authentication Integrated.

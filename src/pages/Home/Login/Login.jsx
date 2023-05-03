@@ -24,10 +24,12 @@ const Login = () => {
         signIn(email, password)
             .then((result) => {
                 const loggedUser = result.user;
-                console.log(loggedUser);
+                // console.log(loggedUser);
                 setSuccess("User logged in successfully.");
                 form.reset();
-                navigate(from, { replace: true });
+                setTimeout(() => {
+                    navigate(from, { replace: true });
+                }, 1000);
             })
             .catch((error) => {
                 const message = error.message;
@@ -43,15 +45,19 @@ const Login = () => {
         googleSignIn()
             .then((result) => {
                 const user = result.user;
-                console.log(user);
+                // console.log(user);
                 setSuccess("User successfully signed in using Google.");
-                navigate(from, { replace: true });
+                setTimeout(() => {
+                    navigate(from, { replace: true });
+                }, 1000);
             })
             .catch((error) => {
                 const message = error.message;
                 console.log(message);
                 setError(message);
-                navigate(from, { replace: true });
+                setTimeout(() => {
+                    navigate(from, { replace: true });
+                }, 1000);
             });
     };
 

@@ -15,7 +15,7 @@ const Register = () => {
         const email = form.email.value;
         const password = form.password.value;
         const photoURL = form.photoURL.value;
-        console.log(name, email, password, photoURL);
+        // console.log(name, email, password, photoURL);
 
         setSuccess("");
         setError("");
@@ -29,7 +29,7 @@ const Register = () => {
         registerUser(email, password)
             .then((result) => {
                 const createdUser = result.user;
-                console.log(createdUser);
+                // console.log(createdUser);
                 setSuccess("Registration completed successfully.");
                 updateUserProfile(createdUser, name, photoURL)
                     .then((result) => {
