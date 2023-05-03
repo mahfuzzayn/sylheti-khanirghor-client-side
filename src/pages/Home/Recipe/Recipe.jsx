@@ -24,7 +24,7 @@ const Recipe = ({ recipe }) => {
     };
 
     return (
-        <div className="recipe mb-5 border-default-color border-b-2 p-4">
+        <div className="recipe mb-5 border-default-color border-b-2 lg:border-b-0 lg:border-r-2 p-4 pb-8">
             <h2 className="text-[22px] font-semibold">{name}</h2>
             <button
                 onClick={() => setIsDropdownVisible(!isDropDownVisible)}

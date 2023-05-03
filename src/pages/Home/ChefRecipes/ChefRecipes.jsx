@@ -1,19 +1,28 @@
 import React, { useEffect, useState } from "react";
 import { FaThumbsUp } from "react-icons/fa";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Recipe from "../Recipe/Recipe";
 
 const ChefRecipes = () => {
     const location = useLocation();
     const [loading, setLoading] = useState(true);
     const [chefData, setChefsData] = useState([]);
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetch(`http://localhost:5000${location.pathname}`)
             .then((res) => res.json())
             .then((data) => {
                 setChefsData(data);
-                setLoading(false);
+                /**********************************/
+                // Lazy Load: Remove this later on
+                /**********************************/
+                setTimeout(() => {
+                    setLoading(false);
+                }, 100);
+            })
+            .catch(() => {
+                navigate("/404", { replace: true });
             });
     }, []);
 
@@ -60,7 +69,7 @@ const ChefRecipes = () => {
                                 <h2 className="text-[26px] font-semibold mb-4">
                                     Recipes
                                 </h2>
-                                <div className="bg-green-50 px-4 py-4 rounded-lg">
+                                <div className="grid grid-cols-1 lg:grid-cols-3 bg-green-50 px-4 py-4 lg:pt-8 gap-x-8 rounded-lg">
                                     {recipes.map((recipe) => (
                                         <Recipe
                                             key={recipe.id}
