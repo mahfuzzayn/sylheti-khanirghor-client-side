@@ -12,16 +12,11 @@ const ChefRecipes = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`http://localhost:5000${location.pathname}`)
+        fetch(`https://sylheti-khanirghor-server-side-devmahfuzzayn.vercel.app${location.pathname}`)
             .then((res) => res.json())
             .then((data) => {
                 setChefsData(data);
-                /**********************************/
-                // Lazy Load: Remove this later on
-                /**********************************/
-                setTimeout(() => {
-                    setLoading(false);
-                }, 100);
+                setLoading(false);
             })
             .catch(() => {
                 navigate("/404", { replace: true });
