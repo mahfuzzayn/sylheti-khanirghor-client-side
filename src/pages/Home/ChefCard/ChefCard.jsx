@@ -1,0 +1,34 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+const ChefCard = ({ chef }) => {
+    const { picture, name, years_of_experience, recipes_count } = chef;
+
+    return (
+        <div className="chef-card bg-green-50 p-5 rounded-xl">
+            <div className="picture">
+                <img
+                    src={picture}
+                    className="w-full h-[250px] object-cover rounded-xl"
+                />
+            </div>
+            <div className="content flex flex-col gap-y-2 mt-4">
+                <h2 className="text-[26px] font-semibold">{name}</h2>
+                <p className="font-medium">
+                    {years_of_experience} years of experience
+                </p>
+                <p className="font-medium">{recipes_count} Recipes</p>
+                <Link>
+                    <button
+                        type="button"
+                        className="focus:outline-none text-white bg-default-color hover:bg-default-color-dark focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 mt-4"
+                    >
+                        View Recipes
+                    </button>
+                </Link>
+            </div>
+        </div>
+    );
+};
+
+export default ChefCard;

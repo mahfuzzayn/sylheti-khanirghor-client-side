@@ -1,10 +1,10 @@
 import React from "react";
-import BannerImage from "../../../assets/images/banner-chefs.jpg";
+import BannerImage from "../../../assets/images/banner/banner-chefs.jpg";
 
 const Banner = () => {
     return (
-        <div className="banner mx-0 sm:mx-5">
-            <div className="container bg-green-50 max-w-[1920px] pt-[50px] md:pt-[100px] pb-[100px] mx-auto">
+        <div className="banner">
+            <div className="container bg-green-50 max-w-[1920px] pt-[50px] md:pt-[100px] px-0 sm:px-5 pb-[100px] mx-auto">
                 <div className="flex flex-col md:flex-row justify-evenly items-center gap-10 p-4">
                     <div className="content text-center md:text-left">
                         <h2 className="text-[40px] lg:text-[60px] font-semibold">
