@@ -10,14 +10,13 @@ const Login = () => {
     const [error, setError] = useState("");
 
     const from = location.state?.from?.pathname || "/";
-    console.log(location);
 
     const handleLogin = (event) => {
         event.preventDefault();
         const form = event.target;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(email, password);
+        // console.log(email, password);
 
         setSuccess("");
         setError("");

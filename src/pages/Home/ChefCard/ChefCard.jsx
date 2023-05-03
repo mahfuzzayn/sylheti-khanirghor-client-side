@@ -1,5 +1,6 @@
 import React from "react";
 import { FaThumbsUp } from "react-icons/fa";
+import LazyLoad from "react-lazy-load";
 import { Link } from "react-router-dom";
 
 const ChefCard = ({ chef }) => {
@@ -9,10 +10,15 @@ const ChefCard = ({ chef }) => {
     return (
         <div className="chef-card bg-green-50 p-5 rounded-xl">
             <div className="picture">
-                <img
-                    src={picture}
-                    className="w-full h-[250px] object-cover rounded-xl"
-                />
+                <LazyLoad
+                    height={250}
+                    onContentVisible={() => console.log("loaded!")}
+                >
+                    <img
+                        src={picture}
+                        className="w-full h-[250px] object-cover rounded-xl"
+                    />
+                </LazyLoad>
             </div>
             <div className="content flex flex-col gap-y-2 mt-4">
                 <h2 className="text-[26px] font-semibold">{name}</h2>

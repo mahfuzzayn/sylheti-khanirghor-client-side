@@ -3,6 +3,7 @@ import { FaThumbsUp } from "react-icons/fa";
 import { useLocation, useNavigate } from "react-router-dom";
 import Recipe from "../Recipe/Recipe";
 import Loader from "../../../components/Loader/Loader";
+import LazyLoad from "react-lazy-load";
 
 const ChefRecipes = () => {
     const location = useLocation();
@@ -43,10 +44,12 @@ const ChefRecipes = () => {
                 {!loading ? (
                     <div className="main-content">
                         <div className="banner flex justify-center">
-                            <img
-                                src={picture}
-                                className="w-full h-[500px] max-w-[768px] object-cover rounded-xl"
-                            />
+                            <LazyLoad height={500}>
+                                <img
+                                    src={picture}
+                                    className="w-full h-[500px] max-w-[768px] object-cover rounded-xl"
+                                />
+                            </LazyLoad>
                         </div>
                         <div className="content max-w-[1280px] flex flex-col gap-y-4 mt-5 mx-auto">
                             <h2 className="text-[26px] font-semibold">
