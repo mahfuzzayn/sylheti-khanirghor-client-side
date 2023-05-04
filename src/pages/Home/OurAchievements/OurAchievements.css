@@ -40,8 +40,8 @@
     text-align: center;
 }
 
-.sf-items-container .item img {
-    margin-bottom: 10px;
+.sf-items-container .item:hover svg {
+    fill: #fff;
 }
 
 .sf-items-container .item,
@@ -65,11 +65,10 @@
     line-height: 23px;
 }
 
-
 /* Some Facts Items Transition Styles */
 .sf-items-container .item:hover {
     background-color: #42b40e;
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .sf-items-container .item:hover img {
@@ -77,9 +76,9 @@
 }
 
 .sf-items-container .item:hover h2.count {
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .sf-items-container .item:hover h3.title {
-    color: #FFFFFF;
+    color: #ffffff;
 }

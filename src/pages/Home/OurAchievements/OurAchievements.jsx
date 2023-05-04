@@ -29,7 +29,10 @@ const OurAchievements = () => {
                         </div>
                         <div class="sf-items-container">
                             <div class="item flex flex-col items-center ">
-                                <FaTrophy className="text-[40px] text-default-color mb-2"></FaTrophy>
+                                <FaTrophy
+                                    className={`text-[40px] text-default-color mb-2`}
+                                ></FaTrophy>
+
                                 <h2 class="count">120</h2>
                                 <h3 class="title">Awards Winnings</h3>
                             </div>
