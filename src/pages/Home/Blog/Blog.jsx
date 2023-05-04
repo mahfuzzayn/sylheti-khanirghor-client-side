@@ -5,7 +5,7 @@ const Blog = () => {
     const blogRef = React.createRef();
 
     return (
-        <div className="blog">
+        <div className="blog" ref={blogRef}>
             <div className="container max-w-[1920px] mx-auto mb-[130px]">
                 <div className="react-to-pdf-container flex justify-end max-w-[1280px] mx-auto mb-8">
                     <ReactToPdf
@@ -30,7 +30,7 @@ const Blog = () => {
                         Blog
                     </h2>
                 </div>
-                <div className="blog-section mt-[130px] mx-12" ref={blogRef}>
+                <div className="blog-section mt-[130px] mx-12">
                     <div className="blog-header">
                         <h1 className="text-[36px] sm:text-[48px] font-bold text-[#1A1919] text-center">
                             Questions
