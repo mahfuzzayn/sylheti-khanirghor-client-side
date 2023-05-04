@@ -6,13 +6,13 @@ const OurAchievements = () => {
     return (
         <div className="our-achievements mx-5">
             <div className="container max-w-[1920px] mx-auto">
-                <section class="some-facts">
-                    <div class="container mx-auto">
-                        <div class="details flex flex-col items-center mx-auto">
-                            <h2 class="details-title text-[35px] sm:text-[45px] text-center">
+                <section className="some-facts">
+                    <div className="container mx-auto">
+                        <div className="details flex flex-col items-center mx-auto">
+                            <h2 className="details-title text-[35px] sm:text-[45px] text-center">
                                 Our Achievements
                             </h2>
-                            <p class="details-description">
+                            <p className="details-description">
                                 We proudly showcase our noteworthy
                                 accomplishments and milestones that we have
                                 achieved over the years. Our team has worked
@@ -27,29 +27,29 @@ const OurAchievements = () => {
                                 our clients.
                             </p>
                         </div>
-                        <div class="sf-items-container">
-                            <div class="item flex flex-col items-center ">
+                        <div className="sf-items-container">
+                            <div className="item flex flex-col items-center ">
                                 <FaTrophy
                                     className={`text-[40px] text-default-color mb-2`}
                                 ></FaTrophy>
 
-                                <h2 class="count">120</h2>
-                                <h3 class="title">Awards Winnings</h3>
+                                <h2 className="count">120</h2>
+                                <h3 className="title">Awards Winnings</h3>
                             </div>
-                            <div class="item flex flex-col items-center">
+                            <div className="item flex flex-col items-center">
                                 <FaThLarge className="text-[40px] text-default-color mb-2"></FaThLarge>
-                                <h2 class="count">14058</h2>
-                                <h3 class="title">Arrangement Made</h3>
+                                <h2 className="count">14058</h2>
+                                <h3 className="title">Arrangement Made</h3>
                             </div>
-                            <div class="item flex flex-col items-center">
+                            <div className="item flex flex-col items-center">
                                 <FaHandshake className="text-[40px] text-default-color mb-2"></FaHandshake>
-                                <h2 class="count">4580</h2>
-                                <h3 class="title">Clients Served</h3>
+                                <h2 className="count">4580</h2>
+                                <h3 className="title">Clients Served</h3>
                             </div>
-                            <div class="item flex flex-col items-center">
+                            <div className="item flex flex-col items-center">
                                 <FaFire className="text-[40px] text-default-color mb-2"></FaFire>
-                                <h2 class="count">77528</h2>
-                                <h3 class="title">Recipes Cooked</h3>
+                                <h2 className="count">77528</h2>
+                                <h3 className="title">Recipes Cooked</h3>
                             </div>
                         </div>
                     </div>
