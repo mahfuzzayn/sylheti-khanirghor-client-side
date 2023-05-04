@@ -4,6 +4,8 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Recipe from "../Recipe/Recipe";
 import Loader from "../../../components/Loader/Loader";
 import LazyLoad from "react-lazy-load";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ChefRecipes = () => {
     const location = useLocation();
@@ -12,7 +14,9 @@ const ChefRecipes = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`https://sylheti-khanirghor-server-side-devmahfuzzayn.vercel.app${location.pathname}`)
+        fetch(
+            `https://sylheti-khanirghor-server-side-devmahfuzzayn.vercel.app${location.pathname}`
+        )
             .then((res) => res.json())
             .then((data) => {
                 setChefsData(data);
@@ -83,6 +87,8 @@ const ChefRecipes = () => {
                     <Loader></Loader>
                 )}
             </div>
+            {/* React Toastify Component */}
+            <ToastContainer />
         </div>
     );
 };

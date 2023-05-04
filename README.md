@@ -1,4 +1,4 @@
-# Sylheti Khanighor
+# Sylheti Khanirghor
 
 Live site: https://sylheti-khanirghor.web.app/
 

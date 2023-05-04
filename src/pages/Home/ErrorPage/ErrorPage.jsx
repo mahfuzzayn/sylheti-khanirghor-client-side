@@ -1,7 +1,7 @@
 import React from "react";
 import NavBar from "../../Shared/NavBar/NavBar";
 import PageFooter from "../../Shared/PageFooter/PageFooter";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const ErrorPage = () => {
     return (

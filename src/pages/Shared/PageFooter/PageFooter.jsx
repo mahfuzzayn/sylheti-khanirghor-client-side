@@ -34,7 +34,7 @@ const PageFooter = () => {
                                 alt="Sylheti Khanighor Logo"
                             />
                             <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-                                Sylheti Khanighor
+                                Sylheti Khanirghor
                             </span>
                         </Link>
                     </div>
@@ -45,7 +45,7 @@ const PageFooter = () => {
                             href="https://flowbite.com/"
                             className="hover:underline"
                         >
-                            Sylheti Khanighor™
+                            Sylheti Khanirghor™
                         </a>
                         . All Rights Reserved.
                     </span>

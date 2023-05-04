@@ -16,7 +16,7 @@ const Chefs = () => {
         <div className="chefs mx-5">
             <div className="container max-w-[1280px] mt-12 mx-auto">
                 <h2 className="text-[30px] md:text-[50px] text-center font-semibold mb-8">
-                    Sylheti Khanighor Chefs
+                    Sylheti Khanirghor Chefs
                 </h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
                     {chefsData.map((chef) => (
