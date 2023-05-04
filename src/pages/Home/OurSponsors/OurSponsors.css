@@ -23,3 +23,15 @@
     font-size: 16px;
     line-height: 26px;
 }
+
+.os-items-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 154px;
+    margin-top: 50px;
+}
+
+.os-items-container .item img {
+    filter: grayscale(100%);
+}
