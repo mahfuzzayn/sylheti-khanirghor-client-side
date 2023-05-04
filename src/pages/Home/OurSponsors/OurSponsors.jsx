@@ -3,9 +3,9 @@ import "./OurSponsors.css";
 
 const OurSponsors = () => {
     return (
-        <div>
-            <section class="our-sponsors">
-                <div class="container">
+        <div className="our-sponsors">
+            <section class="mx-5">
+                <div class="container max-w-[1920px] mx-auto">
                     <div class="details">
                         <h2 class="details-title">Our Sponsors</h2>
                         <p class="details-description">
@@ -18,36 +18,36 @@ const OurSponsors = () => {
                     <div class="os-items-container">
                         <div class="item">
                             <img
-                                src="https://o.remove.bg/downloads/b0ede49d-5d77-4b33-89f0-ada778810bf2/pran-logo-416D020A91-seeklogo.com-removebg-preview.png"
+                                src="https://i.ibb.co/NVs4mH8/pran-logo-416-D020-A91-seeklogo-com-removebg-preview.png"
                                 className="w-[100px]"
                                 alt=""
                             />
                         </div>
                         <div class="item">
                             <img
-                                src="https://o.remove.bg/downloads/aa17ac00-d607-494d-acdb-6fc6a06d01c1/pizza-hut-make-it-great-png-logo-10-removebg-preview.png"
-                                className="max-w-[230px]"
+                                src="https://i.ibb.co/C8s92Wk/pizza-hut-make-it-great-png-logo-10-removebg-preview.png"
+                                className="relative top-[10px] max-w-[230px]"
                                 alt=""
                             />
                         </div>
                         <div class="item">
                             <img
-                                src="https://o.remove.bg/downloads/9616adf0-633c-4ddd-92b7-5dd473b24cfc/445-4456880_dominos-pizza-logo-png-transparent-png-removebg-preview.png"
+                                src="https://i.ibb.co/yVdStSd/445-4456880-dominos-pizza-logo-png-transparent-png-removebg-preview.png"
                                 className="w-[200px]"
                                 alt=""
                             />
                         </div>
                         <div class="item">
                             <img
-                                src="https://o.remove.bg/downloads/9512f1b5-51ce-4717-b102-1b528c2aa1e6/png-clipart-mcdonald-s-logo-mcdonalds-miscellaneous-angle-thumbnail-removebg-preview.png"
-                                className="w-[100px]"
+                                src="https://i.ibb.co/tKQKV3v/v-T8-Lg-YY2no17-Fz-Sjl-AQ9-RP8zl-D6h-KQ3-QKBc-YEFin-removebg-preview.png"
+                                className="relative top-[-35px] w-[140px]"
                                 alt=""
                             />
                         </div>
                         <div class="item">
                             <img
-                                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/KFC_Logo.svg/2560px-KFC_Logo.svg.png"
-                                className="w-[152px]"
+                                src="https://i.ibb.co/vjpnC0H/2560px-KFC-Logo-svg.png"
+                                className="relative top-[13px] w-[140px]"
                                 alt=""
                             />
                         </div>
