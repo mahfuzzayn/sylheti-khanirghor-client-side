@@ -13,6 +13,7 @@ const UserDetails = () => {
     const from = location.pathname;
     const navigate = useNavigate();
     const [success, setSuccess] = useState("");
+    const [error, setError] = useState("");
 
     useEffect(() => {
         if (user?.reloadUserInfo?.localId !== from.split("/")[2]) {
@@ -28,6 +29,14 @@ const UserDetails = () => {
 
         // console.log(displayName, photoUrl);
 
+        setSuccess("");
+        setError("");
+
+        if (displayName.length < 0 || !photoUrl.length < 0) {
+            console.log("no value found");
+            return;
+        }
+
         updateUserProfile(user, displayName, photoUrl)
             .then((result) => {
                 setSuccess(
@@ -40,6 +49,7 @@ const UserDetails = () => {
             })
             .catch((error) => {
                 const message = error.message;
+                setError(message);
                 console.log(message);
             });
     };
@@ -146,6 +156,13 @@ const UserDetails = () => {
                                     <div className="flex justify-end items-start mb-6">
                                         <p className="text-sm font-medium text-default-color dark:text-gray-300">
                                             {success}
+                                        </p>
+                                    </div>
+                                )}
+                                {error && (
+                                    <div className="flex justify-end items-start mb-6">
+                                        <p className="text-sm font-medium text-red-600 dark:text-gray-300">
+                                            {error}
                                         </p>
                                     </div>
                                 )}

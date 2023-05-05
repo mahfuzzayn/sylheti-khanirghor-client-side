@@ -1,13 +1,16 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../../context/AuthProvider";
 
 const Login = () => {
-    const { signIn, googleSignIn, githubSignIn } = useContext(AuthContext);
+    const { signIn, googleSignIn, githubSignIn, resetUserPassword } =
+        useContext(AuthContext);
     const location = useLocation();
     const navigate = useNavigate();
     const [success, setSuccess] = useState("");
     const [error, setError] = useState("");
+    const [isResetPasswordVisible, setIsResetPasswordVisible] = useState(false);
+    const formRef = useRef();
 
     const from = location.state?.from?.pathname || "/";
 
@@ -35,6 +38,9 @@ const Login = () => {
                 const message = error.message;
                 console.log(message);
                 setError(message);
+                if (message === "Firebase: Error (auth/wrong-password).") {
+                    setIsResetPasswordVisible(true);
+                }
             });
     };
 
@@ -78,13 +84,36 @@ const Login = () => {
             });
     };
 
+    const handleResetPassword = () => {
+        const form = formRef.current;
+        const email = form.email.value;
+
+        setSuccess("");
+        setError("");
+
+        resetUserPassword(email)
+            .then((result) => {
+                setIsResetPasswordVisible(false);
+                setSuccess("Password reset link has been sent to your email.");
+            })
+            .catch((error) => {
+                const message = error.message;
+                setError(message);
+                console.log(message);
+            });
+    };
+
     return (
         <div className="login mx-10">
             <div className="container max-w-[1920px] mx-auto">
                 <h2 className="text-[40px] text-center font-semibold mb-5">
                     Please Login
                 </h2>
-                <form onSubmit={handleLogin} className="max-w-[768px] mx-auto">
+                <form
+                    onSubmit={handleLogin}
+                    className="max-w-[768px] mx-auto"
+                    ref={formRef}
+                >
                     <div className="mb-6">
                         <label
                             htmlFor="email"
@@ -115,6 +144,22 @@ const Login = () => {
                             className="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
                             required
                         />
+                    </div>
+                    <div
+                        className={`flex items-start mb-6 ${
+                            isResetPasswordVisible ? "static" : "hidden"
+                        }`}
+                    >
+                        <p className="text-sm font-medium text-gray-900 dark:text-gray-300">
+                            Forget your password?{" "}
+                            <button
+                                onClick={handleResetPassword}
+                                type="button"
+                                className="text-blue-600 hover:underline dark:text-blue-500"
+                            >
+                                Reset Password
+                            </button>
+                        </p>
                     </div>
                     <div className="flex items-start mb-6">
                         <p className="text-sm font-medium text-gray-900 dark:text-gray-300">
