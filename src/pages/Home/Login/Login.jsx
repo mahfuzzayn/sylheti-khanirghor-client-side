@@ -55,9 +55,6 @@ const Login = () => {
                 const message = error.message;
                 console.log(message);
                 setError(message);
-                setTimeout(() => {
-                    navigate(from, { replace: true });
-                }, 1000);
             });
     };
 
@@ -68,8 +65,11 @@ const Login = () => {
         githubSignIn()
             .then((result) => {
                 const user = result.user;
-                console.log(user);
+                // console.log(user);
                 setSuccess("User successfully signed in using Github.");
+                setTimeout(() => {
+                    navigate(from, { replace: true });
+                }, 1000);
             })
             .catch((error) => {
                 const message = error.message;

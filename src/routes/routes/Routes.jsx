@@ -8,6 +8,7 @@ import Register from "../../pages/Home/Register/Register";
 import ChefRecipes from "../../pages/Home/ChefRecipes/ChefRecipes";
 import ErrorPage from "../../pages/Home/ErrorPage/ErrorPage";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
+import UserDetails from "../../pages/Home/UserDetails/UserDetails";
 
 const router = createBrowserRouter([
     {
@@ -35,6 +36,14 @@ const router = createBrowserRouter([
                 element: (
                     <PrivateRoute>
                         <ChefRecipes></ChefRecipes>
+                    </PrivateRoute>
+                ),
+            },
+            {
+                path: "/user-details/:localId",
+                element: (
+                    <PrivateRoute>
+                        <UserDetails></UserDetails>
                     </PrivateRoute>
                 ),
             },

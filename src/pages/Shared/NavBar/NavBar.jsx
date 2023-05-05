@@ -104,10 +104,14 @@ const NavBar = () => {
                                                     user?.displayName
                                                 }
                                             >
-                                                <img
-                                                    src={user.photoURL}
-                                                    className="h-[35px] w-[35px] rounded-full cursor-pointer"
-                                                />
+                                                <Link
+                                                    to={`/user-details/${user?.reloadUserInfo?.localId}`}
+                                                >
+                                                    <img
+                                                        src={user.photoURL}
+                                                        className="h-[35px] w-[35px] rounded-full cursor-pointer"
+                                                    />
+                                                </Link>
                                             </span>
                                             <Tooltip anchorSelect=".user-name-tooltip" />
                                         </>
@@ -119,7 +123,11 @@ const NavBar = () => {
                                                     user?.displayName
                                                 }
                                             >
-                                                <FaUserCircle className="text-[35px] cursor-pointer"></FaUserCircle>
+                                                <Link
+                                                    to={`/user-details/${user?.reloadUserInfo?.localId}`}
+                                                >
+                                                    <FaUserCircle className="text-[35px] cursor-pointer"></FaUserCircle>
+                                                </Link>
                                             </span>
                                             <Tooltip anchorSelect=".user-name-tooltip" />
                                         </>
