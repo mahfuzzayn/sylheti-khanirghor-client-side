@@ -1,5 +1,5 @@
 import React from "react";
-import SylhetiKhanirghorLogo from "../../../assets/sylheti-khanirghor-logo.png";
+import SylhetiKhanirghorLogo from "../../../assets/images/sylheti-khanirghor-logo.png";
 import { Link, NavLink } from "react-router-dom";
 import "./PageFooter.css";
 

@@ -1,29 +1,36 @@
 import React from "react";
-import ReactToPdf from "react-to-pdf";
+import BlogPdf from "../../../components/BlogPdf/BlogPdf";
+import { PDFDownloadLink, PDFViewer } from "@react-pdf/renderer";
+import Loader from "../../../components/Loader/Loader";
 
 const Blog = () => {
-    const blogRef = React.createRef();
-
     return (
-        <div className="blog" ref={blogRef}>
+        <div className="blog">
             <div className="container max-w-[1920px] mx-auto mb-[130px]">
                 <div className="react-to-pdf-container flex justify-end max-w-[1280px] mx-auto mb-8">
-                    <ReactToPdf
-                        targetRef={blogRef}
-                        filename="sylheti-khanirghor-blog.pdf"
+                    <PDFDownloadLink
+                        document={<BlogPdf />}
+                        fileName="sylheti-khanighor-blog-v2"
+                        className="mr-4"
                     >
-                        {({ toPdf }) => (
-                            <>
+                        {({ loading }) =>
+                            loading ? (
                                 <button
-                                    onClick={toPdf}
                                     type="button"
-                                    className="focus:outline-none text-white bg-default-color hover:bg-default-color-dark focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 mt-4 mr-4 sm:mr-8"
+                                    className="focus:outline-none text-white bg-default-color hover:bg-default-color-dark focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 disabled:bg-green-800"
                                 >
-                                    Download this Blog as PDF
+                                    Loading...
                                 </button>
-                            </>
-                        )}
-                    </ReactToPdf>
+                            ) : (
+                                <button
+                                    type="button"
+                                    className="focus:outline-none text-white bg-default-color hover:bg-default-color-dark focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 disabled:bg-green-800"
+                                >
+                                    Generate PDF File
+                                </button>
+                            )
+                        }
+                    </PDFDownloadLink>
                 </div>
                 <div className="blog-banner h-[400px] bg-green-50 flex justify-center items-center">
                     <h2 className="text-[40px] md:text-[50px] text-[#1A1919] font-bold">
@@ -44,9 +51,7 @@ const Blog = () => {
                                     uncontrolled and controlled components.
                                 </h3>
                                 <p className=" mt-1">
-                                    <span className=" font-semibold">
-                                        Ans:{" "}
-                                    </span>
+                                    <span className="font-semibold">Ans: </span>
                                     <span className="text-[#757575]">
                                         Uncontrolled components and controlled
                                         components are terms that are commonly
