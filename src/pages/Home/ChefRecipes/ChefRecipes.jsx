@@ -69,10 +69,10 @@ const ChefRecipes = () => {
                                 {years_of_experience} years of experience
                             </p>
                             <div className="recipes-container">
-                                <h2 className="text-[26px] font-semibold mb-4">
+                                <h2 className="text-[26px] font-semibold">
                                     Recipes
                                 </h2>
-                                <div className="grid grid-cols-1 lg:grid-cols-3 bg-green-50 px-4 py-4 lg:pt-8 gap-x-8 rounded-lg">
+                                <div className="grid grid-cols-1 lg:grid-cols-3 px-4 pb-4 pt-6 lg:pt-8 gap-x-8 rounded-lg">
                                     {recipes.map((recipe) => (
                                         <Recipe
                                             key={recipe.id}
