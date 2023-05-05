@@ -38,17 +38,17 @@ const OurAchievements = () => {
                             </div>
                             <div className="item flex flex-col items-center">
                                 <FaThLarge className="text-[40px] text-default-color mb-2"></FaThLarge>
-                                <h2 className="count">14058</h2>
+                                <h2 className="count">1458</h2>
                                 <h3 className="title">Arrangement Made</h3>
                             </div>
                             <div className="item flex flex-col items-center">
                                 <FaHandshake className="text-[40px] text-default-color mb-2"></FaHandshake>
-                                <h2 className="count">4580</h2>
+                                <h2 className="count">3570</h2>
                                 <h3 className="title">Clients Served</h3>
                             </div>
                             <div className="item flex flex-col items-center">
                                 <FaFire className="text-[40px] text-default-color mb-2"></FaFire>
-                                <h2 className="count">77528</h2>
+                                <h2 className="count">12523</h2>
                                 <h3 className="title">Recipes Cooked</h3>
                             </div>
                         </div>

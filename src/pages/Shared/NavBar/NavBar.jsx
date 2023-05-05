@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import SylhetiKhanirghorLogo from "../../../assets/images/sylheti-khanirghor-logo.png";
 import { Link, NavLink } from "react-router-dom";
 import "./NavBar.css";
@@ -12,12 +12,29 @@ const NavBar = () => {
     const { user } = useContext(AuthContext);
     const [isNavBarCollapsed, setIsNavBarCollapsed] = useState(false);
     const userPhotoUrlStatus = useValidateImageURL(user?.photoURL);
+    const menuRef = useRef();
+
+    useEffect(() => {
+        let menuHandler = (e) => {
+            console.log(!menuRef.current?.contains(e.target));
+            if (!menuRef.current?.contains(e.target)) {
+                setIsNavBarCollapsed(false);
+            }
+        };
+        document.addEventListener("mousedown", menuHandler);
+        return () => {
+            document.removeEventListener("mousedown", menuHandler);
+        };
+    });
 
     return (
         <div className="nav-bar mt-10 mx-0 sm:mx-5 mb-10">
             <div className="container max-w-[1920px] mx-auto">
                 <nav className="bg-white border-gray-200 dark:bg-gray-900">
-                    <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+                    <div
+                        className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+                        ref={menuRef}
+                    >
                         <Link to="/" className="flex items-center">
                             <img
                                 src={SylhetiKhanirghorLogo}
@@ -51,9 +68,9 @@ const NavBar = () => {
                             </svg>
                         </button>
                         <div
-                            className={`${
-                                !isNavBarCollapsed && "hidden"
-                            } w-full md:flex items-center gap-x-10 md:w-auto`}
+                            className={`w-full md:flex items-center gap-x-10 md:w-auto ${
+                                !isNavBarCollapsed ? "hidden" : ""
+                            }`}
                             id="navbar-default"
                         >
                             <ul className="font-semibold flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">

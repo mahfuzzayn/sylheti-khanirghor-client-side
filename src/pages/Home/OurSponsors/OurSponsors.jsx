@@ -19,21 +19,21 @@ const OurSponsors = () => {
                         <div className="item">
                             <img
                                 src="https://i.ibb.co/NVs4mH8/pran-logo-416-D020-A91-seeklogo-com-removebg-preview.png"
-                                className="w-[100px]"
+                                className="relative top-[5px] w-[100px]"
                                 alt=""
                             />
                         </div>
                         <div className="item">
                             <img
-                                src="https://i.ibb.co/C8s92Wk/pizza-hut-make-it-great-png-logo-10-removebg-preview.png"
-                                className="relative top-[10px] max-w-[230px]"
+                                src="https://i.ibb.co/d0SWyfc/logo-removebg-preview.png"
+                                className="max-w-[120px]"
                                 alt=""
                             />
                         </div>
                         <div className="item">
                             <img
-                                src="https://i.ibb.co/yVdStSd/445-4456880-dominos-pizza-logo-png-transparent-png-removebg-preview.png"
-                                className="w-[200px]"
+                                src="https://i.ibb.co/fn8WZRx/KFK-logo-ai.png"
+                                className="relative top-[-15px] w-[200px]"
                                 alt=""
                             />
                         </div>
@@ -46,8 +46,8 @@ const OurSponsors = () => {
                         </div>
                         <div className="item">
                             <img
-                                src="https://i.ibb.co/vjpnC0H/2560px-KFC-Logo-svg.png"
-                                className="relative top-[13px] w-[140px]"
+                                src="https://i.ibb.co/dcZ9wJs/1200px-Ajinomoto-logo-svg.png"
+                                className="relative top-[25px] w-[140px]"
                                 alt=""
                             />
                         </div>
