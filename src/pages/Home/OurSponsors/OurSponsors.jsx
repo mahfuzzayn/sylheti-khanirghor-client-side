@@ -4,7 +4,7 @@ import "./OurSponsors.css";
 const OurSponsors = () => {
     return (
         <div className="our-sponsors">
-            <section className="mx-5">
+            <section className="mb-[130px] mx-5">
                 <div className="container max-w-[1920px] mx-auto">
                     <div className="details">
                         <h2 className="details-title">Our Sponsors</h2>

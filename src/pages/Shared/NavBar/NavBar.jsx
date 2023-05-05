@@ -16,7 +16,6 @@ const NavBar = () => {
 
     useEffect(() => {
         let menuHandler = (e) => {
-            console.log(!menuRef.current?.contains(e.target));
             if (!menuRef.current?.contains(e.target)) {
                 setIsNavBarCollapsed(false);
             }
@@ -126,7 +125,7 @@ const NavBar = () => {
                                         </>
                                     )
                                 ) : (
-                                    <Link to="/login" className="py-2.5 ">
+                                    <Link to="/login" className="py-2.5">
                                         <button
                                             type="button"
                                             className="focus:outline-none text-white bg-default-color hover:bg-default-color-dark focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800"
